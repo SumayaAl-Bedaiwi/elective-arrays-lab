@@ -55,7 +55,7 @@ end
 #9: Create a method called reverse_each that takes an array of strings as an argument and returns another array where the strings have each been reversed.
 def reverse_each (array)
     array.each do |data|
-      puts "#{data.reverse}" 
+      puts data.reverse!
     end
 end
 
@@ -63,18 +63,27 @@ end
 
 #10: Create a method called sum that takes an array as an argument and returns the sum of all of the numbers in the array.
 def sum (array)
+    total = 0
     array.each do |num|
-        
+        total = total + num
     end    
-    
+    total
 end
 
 #11: Create a method called average that takes an array as an argument and returns the mean average of all of the numbers in the array.
-
+def average (array)
+    total = 0
+    array.each do |num|
+        total = total + num
+    end    
+    total/array.length
+end
 
 #12: Double Bonus! Write a method called length_finder that takes in an array of strings and returns an array containing the length of each of those strings.
 def length_finder(array)
-    array.each do |word|
-       puts word.length 
+    array2 = []
+    array.each do |course|
+       array2.push(course.length)
     end
+    return array2
 end
